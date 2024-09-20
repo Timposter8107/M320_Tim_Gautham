@@ -1,4 +1,7 @@
+import java.util.ArrayList;
+
 public class Medien {
+    public ArrayList<Medien> MedienList = new ArrayList<>();
     private String Titel;
     private Integer Jahr;
     private Double Preis;

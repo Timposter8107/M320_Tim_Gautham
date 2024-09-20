@@ -3,10 +3,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        ArrayList<Medien> MedienList = new ArrayList<>();
-        Scanner sc = new Scanner(System.in);
 
+        ArrayList<Medien> MedienList = new ArrayList<>();
         while(true){
+            Scanner sc = new Scanner(System.in);
+
             System.out.println("a | Alle Medien anzeigen");
             System.out.println("h | Medien hinzufügen");
             System.out.println("e | Beenden");
@@ -35,7 +36,7 @@ public class Main {
                     String jahr;
                     String preis;
 
-                    switch (medienTyp.toLowerCase()){
+                    switch (medienTyp.toLowerCase()) {
                         case "d":
                             System.out.println("Titel eingeben");
                             titel = sc.next();
@@ -46,6 +47,8 @@ public class Main {
                             System.out.println("Länge eingeben");
                             String laenge = sc.next();
                             DVD dvd = new DVD(titel, Integer.parseInt(jahr), Double.parseDouble(preis), laenge);
+
+                            MedienList.add(dvd);
                             break;
                         case "c":
                             System.out.println("Titel eingeben");
@@ -57,6 +60,7 @@ public class Main {
                             System.out.println("Band Name eingeben");
                             String bandname = sc.next();
                             CD cd = new CD(titel, Integer.parseInt(jahr), Double.parseDouble(preis), bandname);
+                            MedienList.add(cd);
                             break;
                         case "b":
                             System.out.println("Titel eingeben");
@@ -68,6 +72,7 @@ public class Main {
                             System.out.println("ISBN-Nummer eingeben");
                             String isbn = sc.next();
                             Buch buch = new Buch(titel, Integer.parseInt(jahr), Double.parseDouble(preis), isbn);
+                            MedienList.add(buch);
                             break;
                         default:
                             System.out.println("Ungültige Eingabe");
