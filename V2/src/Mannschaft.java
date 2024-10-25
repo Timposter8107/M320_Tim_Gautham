@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Tim & Gautham
+ *
+ * Mannschafts-Klasse
+ */
 public class Mannschaft {
     List<Spieler> spielerList = new ArrayList<Spieler>();
 
@@ -18,11 +23,14 @@ public class Mannschaft {
     Spieler verteidiger4 = new Verteidiger();
     Spieler verteidiger5 = new Verteidiger();
 
+    /**
+     * Methode zur Ausgabe der Spieler Liste
+     */
     void spielerListAusgeben() {
         for (Spieler s : spielerList) {
             s.zeigeName();
             s.spielen();
-            System.out.println("");
+            System.out.println();
         }
     }
 }
