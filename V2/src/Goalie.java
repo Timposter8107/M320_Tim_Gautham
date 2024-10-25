@@ -1,6 +1,12 @@
+/**
+ * @author Tim & Gautham
+ *
+ * Goalie Klasse
+ */
 public class Goalie extends Spieler {
-    double koerperGroesse;
-
+    /**
+     * Methode zur Beschreibung des Goalies auf dem Spielfeld
+     */
     @Override
     void spielen() {
         System.out.println("Goalie");

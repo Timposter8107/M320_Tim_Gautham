@@ -1,5 +1,18 @@
+/**
+ * @author Tim & Gautham
+ *
+ * Main Klasse
+ */
 public class Main {
+    /**
+     * Konstruktor
+     * @param args
+     */
     public static void main(String[] args) {
+
+        /**
+         * Erstellung neuer Mannschaft inklusive Spieler
+         */
         Mannschaft mannschaft = new Mannschaft();
 
         mannschaft.goalie.name = "Emma Davis";
